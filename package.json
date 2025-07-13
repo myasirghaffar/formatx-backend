@@ -18,12 +18,12 @@
   "author": "Myasir Ghaffar",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2",
     "cors": "^2.8.5",
-    "multer": "^1.4.5-lts.1",
-    "pdf-lib": "^1.17.1",
+    "dotenv": "^16.6.1",
+    "express": "^4.18.2",
     "libreoffice-convert": "^1.4.1",
-    "dotenv": "^16.3.1"
+    "multer": "^1.4.5-lts.1",
+    "pdf-lib": "^1.17.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"

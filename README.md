@@ -55,6 +55,29 @@ A comprehensive backend API for document format conversion and PDF operations bu
 npm install
 ```
 
+## Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+# Server Configuration
+PORT=5000
+NODE_ENV=development
+
+# File Upload Configuration
+MAX_FILE_SIZE=52428800
+MAX_FILES=10
+```
+
+### Environment Variables Explained
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `PORT` | `5000` | The port on which the server will run |
+| `NODE_ENV` | `development` | Environment mode (development/production) |
+| `MAX_FILE_SIZE` | `52428800` | Maximum file size in bytes (50MB) |
+| `MAX_FILES` | `10` | Maximum number of files for batch operations |
+
 ## Usage
 
 ### Development
@@ -67,16 +90,7 @@ npm run dev
 npm start
 ```
 
-The server will start on `http://localhost:5000`
-
-## Environment Variables
-
-Create a `.env` file in the root directory:
-
-```env
-PORT=5000
-NODE_ENV=development
-```
+The server will start on the port specified in your `.env` file or default to `http://localhost:5000`
 
 ## File Upload Limits
 
@@ -109,6 +123,7 @@ The API returns appropriate HTTP status codes:
 │   └── fileUtils.js
 ├── app.js             # Express app configuration
 ├── server.js          # Production server entry point
+├── .env               # Environment variables (create this)
 └── package.json       # Dependencies and scripts
 ```
 
@@ -119,6 +134,7 @@ The API returns appropriate HTTP status codes:
 - **PDF-lib**: PDF manipulation
 - **LibreOffice Convert**: Document format conversion
 - **CORS**: Cross-origin resource sharing
+- **dotenv**: Environment variable management
 
 ## Contributing
 
